@@ -8,6 +8,12 @@ test('Addition', function() {
 
 test('Longest String', function() {
   const expected = 'abcd';
-  const result = functions.longestString(['a', 'abc', 'abcd', 'ab']);
+  const result = functions.longestString(['a', 'abc', 'abcd', 'ab', 'defg']);
+  expect(result).toEqual(expected);
+});
+
+test('L337', () => {
+  const expected = '112345677890';
+  const result = functions.l337('ilzeasgtybqo');
   expect(result).toEqual(expected);
 });
