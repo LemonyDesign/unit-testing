@@ -35,10 +35,7 @@ const l337 = string => {
   return string
     .split('')
     .map(item => {
-      if (swapRules.hasOwnProperty(item)) {
-        return (item = swapRules[item]);
-      }
-      return item;
+      return swapRules.hasOwnProperty(item) ? item = swapRules[item] : item;
     })
     .join('');
 };
