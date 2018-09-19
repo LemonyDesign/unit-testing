@@ -21,4 +21,5 @@ test('L337', () => {
 test('Unique strings', () => {
   const result = functions.uniqueStrings(['a', 'ab', 'ab', 'c', 'a']);
   const expected = ['a', 'ab', 'c'];
+  expect(result).toEqual(expected);
 });

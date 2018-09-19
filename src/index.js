@@ -42,6 +42,21 @@ const l337 = string => {
 
 exports.l337 = l337;
 
-const uniqueStrings = a => {
-  return a;
-};
+  // is it there? 
+  // if it is there - return value
+  // if it not there yet - create property false value, and test it equals false - which returns true - so it keeps in the array when filtering
+// const uniqueStrings = array => {
+//   const lookUp = {};
+//   return array.filter(item => {
+//     return (lookUp.hasOwnProperty(item) ? lookUp[item] : (lookUp[item] = false) === false)
+//   });
+// };
+
+// if the i counter is greater than the index of the array (first instance of that item in the array) - it's a duplicate; so filter these out
+const uniqueStrings = array => {
+  return array.filter((item, i) => {
+    return !(i > array.indexOf(item))
+  });
+  };
+
+exports.uniqueStrings = uniqueStrings;
