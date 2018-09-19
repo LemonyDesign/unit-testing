@@ -17,3 +17,8 @@ test('L337', () => {
   const result = functions.l337('ilzeasgtybqo');
   expect(result).toEqual(expected);
 });
+
+test('Unique strings', () => {
+  const result = functions.uniqueStrings(['a', 'ab', 'ab', 'c', 'a']);
+  const expected = ['a', 'ab', 'c'];
+});
