@@ -35,16 +35,16 @@ const l337 = string => {
   return string
     .split('')
     .map(item => {
-      return swapRules.hasOwnProperty(item) ? item = swapRules[item] : item;
+      return swapRules.hasOwnProperty(item) ? (item = swapRules[item]) : item;
     })
     .join('');
 };
 
 exports.l337 = l337;
 
-  // is it there? 
-  // if it is there - return value
-  // if it not there yet - create property false value, and test it equals false - which returns true - so it keeps in the array when filtering
+// is it there?
+// if it is there - return value
+// if it not there yet - create property false value, and test it equals false - which returns true - so it keeps in the array when filtering
 // const uniqueStrings = array => {
 //   const lookUp = {};
 //   return array.filter(item => {
@@ -52,11 +52,18 @@ exports.l337 = l337;
 //   });
 // };
 
+// const uniqueStrings = array => {
+//   const unique = {};
+//   return array.filter(item => {
+//     return item in unique ? unique[item] : (unique[item] = false) === false;
+//   });
+// };
+
 // if the i counter is greater than the index of the array (first instance of that item in the array) - it's a duplicate; so filter these out
 const uniqueStrings = array => {
   return array.filter((item, i) => {
-    return !(i > array.indexOf(item))
+    return !(i > array.indexOf(item));
   });
-  };
+};
 
 exports.uniqueStrings = uniqueStrings;
