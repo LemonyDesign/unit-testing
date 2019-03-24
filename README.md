@@ -1,5 +1,8 @@
-**Pair programming**
+**Basic unit tests learning exercise using JEST**
+* Write a solution to each exercise and a corresponding test which ensures correctness of solution. Tests have been written before writing solution. 
+* Further work to be done in devising multiple tests for each question to cover different inputs and outputs, to test the rigour of tests.
 
+**Installation**
 * Fork and clone repo at this repo
 * run `npm install` after cloning to download external dependencies
 * Write a solution to each exercise and a corresponding test which ensures correctness of solution
